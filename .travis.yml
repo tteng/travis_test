@@ -11,3 +11,5 @@ before_script:
   - "bundle exec rake db:drop db:create db:migrate"
 script: "bundle exec rspec spec/"
 after_script: true
+bundler_args: --without development --deployment
+cache: bundler
